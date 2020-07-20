@@ -320,7 +320,7 @@ export function replace(path: {}, property: string, f?: any): any;
  * @param {...any[]} args
  * @returns {Stubber}
  */
-export function when<P>(f: Promise<P>, config?: WhenConfig): PromiseStubber<P>;
+export function when<P>(f: PromiseLike<P>, config?: WhenConfig): PromiseStubber<P>;
 export function when<D>(f: D, config?: WhenConfig): Stubber<D>;
 /**
  * Verify a specific function call to a stubbed function.
